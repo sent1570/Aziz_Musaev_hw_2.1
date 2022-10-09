@@ -1,12 +1,23 @@
 package com.company;
 
+import com.sun.security.jgss.GSSUtil;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-createObject(2).print();
-createObject(3).print();
-createObject(4).print();
+        List<Integer> a=new ArrayList<>(List.of(1,2,3));
+        Iterator<Integer> itr = a.iterator();
+        while (itr.hasNext()) {
+            Integer element = itr.next();
+            System.out.println(element);
+        }
+        System.out.println("\n"+a.get(0));
     }
+
     public static Car createObject(int number) {
         switch (number) {
             case 2:
